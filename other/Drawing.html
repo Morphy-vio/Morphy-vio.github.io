@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .image-container {
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8 max-w-5xl">
+        <!-- 项目标题 -->
+        <div class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Drawing</h1>
+            <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+
+        <!-- 项目介绍 -->
+        <div class="bg-white rounded-xl shadow-sm p-6 mb-10">
+            <!-- <strong class="font-large text-gray-900 mb-4" style="font-size: larger;">Key Experiences:</strong> -->
+            <!-- <br>
+            <br> -->
+            <div class="space-y-4 mb-6">
+                <div class="section">
+                    <p>With 12 years of experience, I’ve mastered various art forms, from Western sketching and oil
+                        painting to traditional Chinese painting, woodcut prints, and seal carving. Painting serves as
+                        both a creative outlet and a way to document life.</p>
+                </div>
+
+                <div class="section">
+                    <p>Spent a year creating a challenging 1-meter-square Dunhuang painting, now displayed as a
+                        signature piece in the middle school art club.</p>
+                </div>
+
+                <div class="section">
+                    <p>My oil paintings have earned numerous accolades, including:</p>
+                    <ol class="achievements-list">
+                        <li>First Prize in the “National Primary and Secondary School Painting and Calligraphy
+                            Competition”</li>
+                        <li>Gold Medal in the “World Peace Painting and Calligraphy Exhibition for Youth” in Paris,
+                            France</li>
+                        <li>Gold Medal in the “World Peace Painting and Calligraphy Exhibition for Youth” in Australia
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="section">
+                    <p>Applied creativity to all aspects of life, using classroom boards and assignments as canvases.
+                    </p>
+                </div>
+
+                <div class="section">
+                    <p>Shared cartoon art on social media, created personalized gifts for friends, and contributed fan
+                        art to celebrity support designs. One cartoon character was featured on concert screens,
+                        reaching over 50,000 viewers.</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- 活动照片 -->
+        <div class="mb-10">
+            <h2 class="text-xl font-semibold mb-6 text-gray-800 text-center">Photos</h2>
+
+            <!-- 第一行图片 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                <div class="image-container rounded-xl overflow-hidden shadow-sm cursor-pointer"
+                    onclick="openImageModal('../img/Drawing/1.png')">
+                    <img src="../img/Drawing/1.png" alt="Reading session with children" class="w-full h-64 object-cover">
+
+                </div>
+                <div class="image-container rounded-xl overflow-hidden shadow-sm cursor-pointer"
+                    onclick="openImageModal('../img/Drawing/2.png')">
+                    <img src="../img/Drawing/2.png" alt="Volunteer training workshop" class="w-full h-64 object-cover">
+
+                </div>
+                <div class="image-container rounded-xl overflow-hidden shadow-sm cursor-pointer"
+                    onclick="openImageModal('../img/Drawing/3.png')">
+                    <img src="../img/Drawing/3.png" alt="Audio book recording session" class="w-full h-64 object-cover">
+
+                </div>
+            </div>
+
+            <!-- 第二行图片 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                <div class="image-container rounded-xl overflow-hidden shadow-sm cursor-pointer"
+                    onclick="openImageModal('../img/Drawing/5.png')">
+                    <img src="../img/Drawing/5.png" alt="Reading session with children" class="w-full h-64 object-cover">
+
+                </div>
+                <div class="image-container rounded-xl overflow-hidden shadow-sm cursor-pointer"
+                    onclick="openImageModal('../img/Drawing/8.png')">
+                    <img src="../img/Drawing/8.png" alt="Volunteer training workshop" class="w-full h-64 object-cover">
+
+                </div>
+                <div class="image-container rounded-xl overflow-hidden shadow-sm cursor-pointer"
+                    onclick="openImageModal('../img/Drawing/9.png')">
+                    <img src="../img/Drawing/9.png" alt="Audio book recording session" class="w-full h-64 object-cover">
+
+                </div>
+            </div>
+
+            <!-- 第3行图片 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                <div class="image-container rounded-xl overflow-hidden shadow-sm cursor-pointer"
+                    onclick="openImageModal('../img/Drawing/4.png')">
+                    <img src="../img/Drawing/4.png" alt="Reading session with children" class="w-full h-64 object-cover">
+
+                </div>
+                <div class="image-container rounded-xl overflow-hidden shadow-sm cursor-pointer"
+                    onclick="openImageModal('../img/Drawing/6.png')">
+                    <img src="../img/Drawing/6.png" alt="Volunteer training workshop" class="w-full h-64 object-cover">
+
+                </div>
+                <div class="image-container rounded-xl overflow-hidden shadow-sm cursor-pointer"
+                    onclick="openImageModal('../img/Drawing/7.png')">
+                    <img src="../img/Drawing/7.png" alt="Audio book recording session" class="w-full h-64 object-cover">
+
+                </div>
+            </div>
+
+
+            <!-- 第4行图片 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                <div class="image-container rounded-xl overflow-hidden shadow-sm cursor-pointer"
+                    onclick="openImageModal('../img/Drawing/10.png')">
+                    <img src="../img/Drawing/10.png" alt="Reading session with children" class="w-full h-64 object-cover">
+
+                </div>
+                <div class="image-container rounded-xl overflow-hidden shadow-sm cursor-pointer"
+                    onclick="openImageModal('../img/Drawing/11.png')">
+                    <img src="../img/Drawing/11.png" alt="Volunteer training workshop" class="w-full h-64 object-cover">
+
+                </div>
+                <div class="image-container rounded-xl overflow-hidden shadow-sm cursor-pointer"
+                    onclick="openImageModal('../img/Drawing/12.png')">
+                    <img src="../img/Drawing/12.png" alt="Audio book recording session" class="w-full h-64 object-cover">
+
+                </div>
+            </div>
+
+            <!-- 第5行图片 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                <div class="image-container rounded-xl overflow-hidden shadow-sm cursor-pointer"
+                    onclick="openImageModal('../img/Drawing/13.png')">
+                    <img src="../img/Drawing/13.png" alt="Reading session with children" class="w-full h-64 object-cover">
+
+                </div>
+                <div class="image-container rounded-xl overflow-hidden shadow-sm cursor-pointer"
+                    onclick="openImageModal('../img/Drawing/14.png')">
+                    <img src="../img/Drawing/14.png" alt="Volunteer training workshop" class="w-full h-64 object-cover">
+
+                </div>
+                <div class="image-container rounded-xl overflow-hidden shadow-sm cursor-pointer"
+                    onclick="openImageModal('../img/Drawing/15.png')">
+                    <img src="../img/Drawing/15.png" alt="Audio book recording session" class="w-full h-64 object-cover">
+
+                </div>
+            </div>
+
+            <!-- 第6行图片 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                <div class="image-container rounded-xl overflow-hidden shadow-sm cursor-pointer"
+                    onclick="openImageModal('../img/Drawing/16.png')">
+                    <img src="../img/Drawing/16.png" alt="Reading session with children" class="w-full h-64 object-cover">
+
+                </div>
+                <div class="image-container rounded-xl overflow-hidden shadow-sm cursor-pointer"
+                    onclick="openImageModal('../img/Drawing/17.png')">
+                    <img src="../img/Drawing/17.png" alt="Volunteer training workshop" class="w-full h-64 object-cover">
+
+                </div>
+                <div class="image-container rounded-xl overflow-hidden shadow-sm cursor-pointer"
+                    onclick="openImageModal('../img/Drawing/18.png')">
+                    <img src="../img/Drawing/18.png" alt="Audio book recording session" class="w-full h-64 object-cover">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 图片放大模态框 -->
+    <div id="imageModal" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4">
+        <button onclick="closeImageModal()"
+            class="absolute top-4 right-6 text-white text-3xl hover:text-gray-300 transition-colors">
+            <i class="fa fa-times"></i>
+        </button>
+        <img id="modalImage" src="" alt="Enlarged image" class="max-w-[90%] max-h-[90vh] object-contain">
+    </div>
+
+    <script>
+        // 打开图片模态框
+        function openImageModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = imageSrc;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden'; // 禁止背景滚动
+        }
+
+        // 关闭图片模态框
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = ''; // 恢复背景滚动
+        }
+
+        // 点击模态框背景关闭
+        document.getElementById('imageModal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('imageModal')) {
+                closeImageModal();
+            }
+        });
+
+        // 按ESC键关闭
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !document.getElementById('imageModal').classList.contains('hidden')) {
+                closeImageModal();
+            }
+        });
+    </script>
+</body>
+
+</html>

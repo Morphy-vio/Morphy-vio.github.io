@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .image-container {
+            transition: transform 0.3s ease;
+        }
+        .image-container:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8 max-w-5xl">
+        <!-- 项目标题 -->
+        <div class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Student Union Orientation Tutor-Tutee Project</h1>
+            <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+        
+        <!-- 项目介绍 -->
+        <div class="bg-white rounded-xl shadow-sm p-6 mb-10">
+            <h2 class="text-xl font-semibold mb-4 text-gray-800">About the Program</h2>
+            <p class="text-gray-600 mb-4">
+                Guided 20 new students through their transition, organizing 5+ online orientation meetings and providing personalized academic and school life mentoring.
+            </p>
+            <p class="text-gray-600">
+                Coordinated 1v1 tutoring sessions for 400+ freshmans, offering support and guidance.
+            </p>
+        </div>
+        
+        
+        <!-- 活动照片 -->
+        <div class="mb-10">
+            <h2 class="text-xl font-semibold mb-6 text-gray-800 text-center">Program Activities</h2>
+            
+            <!-- 第一行图片 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-6">
+                <div class="image-container rounded-xl overflow-hidden shadow-sm cursor-pointer" onclick="openImageModal('../img/SUORTTP/1.png')">
+                    <img src="../img/SUORTTP/1.png" alt="Reading session with children" class="w-full h-64 object-cover">
+
+                </div>
+                <div class="image-container rounded-xl overflow-hidden shadow-sm cursor-pointer" onclick="openImageModal('../img/SUORTTP/2.png')">
+                    <img src="../img/SUORTTP/2.png" alt="Volunteer training workshop" class="w-full h-64 object-cover">
+
+                </div>
+
+            </div>
+            
+           
+            
+        </div>        
+    </div>
+    
+
+    <!-- 图片放大模态框 -->
+    <div id="imageModal" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4">
+        <button onclick="closeImageModal()" class="absolute top-4 right-6 text-white text-3xl hover:text-gray-300 transition-colors">
+            <i class="fa fa-times"></i>
+        </button>
+        <img id="modalImage" src="" alt="Enlarged image" class="max-w-[90%] max-h-[90vh] object-contain">
+    </div>
+
+    <script>
+        // 打开图片模态框
+        function openImageModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = imageSrc;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden'; // 禁止背景滚动
+        }
+
+        // 关闭图片模态框
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = ''; // 恢复背景滚动
+        }
+
+        // 点击模态框背景关闭
+        document.getElementById('imageModal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('imageModal')) {
+                closeImageModal();
+            }
+        });
+
+        // 按ESC键关闭
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !document.getElementById('imageModal').classList.contains('hidden')) {
+                closeImageModal();
+            }
+        });
+    </script>
+</body>
+</html>
